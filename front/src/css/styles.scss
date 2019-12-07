@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+$blueColor: #0199BE;
+$orangeColor: #E5A239;
+$defaultFontSize: 16px;
+$gridWidth: 1720px;
+
+@function px2rem($fontSize) {
+	@return $fontSize / $defaultFontSize * 1rem;
+}
+
+html {
+	font-size: $defaultFontSize;
+	font-family: "Open Sans";
+
+	@media screen and (min-width: 1281px) and (max-width: 1440px) { font-size: 14px; }
+
+	@media screen and (min-width: 998px) and (max-width: 1280px) { font-size: 13px; }
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+h1 { margin: 0; }
+
+h1 {
+	color: $orangeColor;
+	font-size: px2rem(60px);
+	margin-bottom: px2rem(20px);
+}
+
+.grid {
+	max-width: px2rem($gridWidth);
+	padding: 0 px2rem(40px);
+}
+
+main.grid { padding: { top: px2rem(80px); bottom: px2rem(80px); }; }
+
+.header {
+	background-color: $blueColor;
+	height: px2rem(80px);
+	padding: px2rem(10px) 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+
+	.grid {
+		height: 100%;
+	}
+}
+
+.logo {
+	height: 100%;
+
+	img {
+		height: 100%;
+		display: block;
+	}
+}
+
+.posts-section {
+
+}
+
+.post-article {
+	border: 2px solid $orangeColor;
+	border-radius: px2rem(5px);
+	padding: px2rem(20px);
+
+	&:not(:last-of-type) {
+		margin-bottom: px2rem(20px);
+	}
+}
