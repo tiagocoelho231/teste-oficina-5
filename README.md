@@ -3,7 +3,7 @@ Rodar este comando no terminal para iniciar a imagem do Docker do MySQL
 docker run -it --name mysql -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql
 
 Clonar o repositório
-git clone git@github.com:tiagocoelho231/teste-oficina-5.git
+git clone https://github.com/tiagocoelho231/teste-oficina-5.git
 
 Entrar na pasta da API e rodar este comando para instalar os módulos Node.
 yarn install
